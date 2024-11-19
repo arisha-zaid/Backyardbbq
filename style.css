@@ -28,7 +28,7 @@ header{
    justify-content: space-between;
    align-items: center;
    z-index: 1000;
-   padding: 0 1.5rem 0 1.5rem;
+   padding: 0 0.5rem 0 1.5rem;
    background-color: var(--black);
    height: 50px;
 }
@@ -59,48 +59,36 @@ header .nav-bar  a:hover{
 
 header .left-nav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 15%;
+    /* width: 10%; */
 }
 header .left-nav i{
     color: var(--yellow);
     cursor: pointer;
+    padding: 1rem;
 }
 header .left-nav .menu-bars{
     display: none;
 }
 header .left-nav i:hover{
    color: var(--glowupyellow);
+   font-size: 1.3rem;
 }
 
 .view{
-    display: flex;
+     left: 100%;
 }
 
 @media (max-width:990px){
     header .nav-bar{
         width: 40%;
     }
-}
-
-@media (max-width:700px){
-    header .left-nav .menu-bars{
-        display: inline-block;
-    }
-    header .logo{
-        font-size: 1.5rem;
-    }
     header .nav-bar{
-        /* position: relative;
-        left: 36%;
-        right: 0; */
-        /* top: 350%; */
-        /* display: -webkit-inline-box; */
         position: absolute;
-        left: 30%;
+        left: 60%;
         right: 0;
-        top: 0;
+        top: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -109,10 +97,7 @@ header .left-nav i:hover{
         border-radius: 1%;
         box-shadow: 1px 1px 1px black;
         z-index: 100;
-        /* to hide nav-bar we have used clip-path property */
-        /* clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 0%); */
         /* display: none; */
-}
     }
     header .left-nav{
         width: 35%;
@@ -130,10 +115,30 @@ header .left-nav i:hover{
         text-decoration: none;
         transition: all 0.2s linear;
     }
+    header .left-nav .menu-bars{
+        display: inline-block;
+    }
+}
 
+@media (max-width:700px){
+    header .logo{
+        font-size: 1.5rem;
+    }
+    header .left-nav {
+      padding-right: 2rem;
+    }
+    header .left-nav i,a{
+        font-size: 1rem;
+        padding: none;
+    }
+
+}
 
 @media (max-width:500px){
     header{
      padding-right:0.5rem ;
+    }
+    header .left-nav .fa-heart{
+        display: none;
     }
 }
