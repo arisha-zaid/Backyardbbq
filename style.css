@@ -1,10 +1,16 @@
+@import url();
 
 :root{
     --black:rgb(0,0,0);
-    --yellow:rgb(216, 216, 3);
+    --yellow:#FFC107;
     --orange:orange;
     --white:white;
-    --glowupyellow:yellow;
+    --glowupyellow:rgb(220, 187, 25);
+    --blackcover:rgba(0, 0, 0, 0.7);
+    --whitecover:rgb(255,255,255,0.7);
+    --footerdark:rgb(63, 61, 61);
+    --footerbright:rgb(141, 141, 141);
+    --brown:rgb(46, 31, 31);
 }
 
 *{
@@ -19,6 +25,17 @@
     text-transform: capitalize;
 }
 
+body{
+    background-image: linear-gradient(var(--blackcover),var(--blackcover)),url(assest/backgroundimg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+}
+   /* ------------header section starts--------------- */
 header{
     position: fixed;
     left: 0;
@@ -50,11 +67,25 @@ header .nav-bar  a{
     color: var(--yellow);
     font-weight: 250;
     font-size: 1rem;
+    text-decoration: none;
+    position: relative;
 }
-
-header .nav-bar  a:hover{
-    text-decoration: underline;
-    cursor: pointer;
+/* underline transition in nav-bar */
+header .nav-bar  a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--yellow);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+header .nav-bar  a:hover::after{
+    transform: scaleX(1);
+    transform-origin:bottom right ;
 }
 
 header .left-nav{
@@ -76,10 +107,6 @@ header .left-nav i:hover{
    font-size: 1.3rem;
 }
 
-.view{
-     left: 100%;
-}
-
 @media (max-width:990px){
     header .nav-bar{
         width: 40%;
@@ -97,8 +124,14 @@ header .left-nav i:hover{
         border-radius: 1%;
         box-shadow: 1px 1px 1px black;
         z-index: 100;
-        /* display: none; */
+        clip-path: polygon(0 0, 100% 0,100% 0,0 0);
+       
     }
+
+    header .nav-bar .view{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
     header .left-nav{
         width: 35%;
     }
@@ -142,3 +175,99 @@ header .left-nav i:hover{
         display: none;
     }
 }
+ /* ------------------header section ends---------------------- */
+
+/* ----------------home Section starts----------------------*/
+
+.home-section{
+    padding-top:5rem ;
+}
+.home-section .wrapper .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-section .wrapper .slide .content h3{
+    color: var(--orange);
+    font-size: 2rem;
+    
+}
+.home-section .wrapper .slide .content span{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+/* rotating effect in dishes */
+.home-section .wrapper .slide .rotate img{
+    width: 500px;
+   animation: spin 20s linear infinite;
+}
+@keyframes spin {
+    0%{
+       transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.home-section .wrapper .slide .burger img{
+    animation: squeeze 4s linear infinite;
+}
+@keyframes squeeze {
+    0%{
+        transform: scale3d(0.2);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+/* ----------------home Section ends----------------------- */
+
+ /* ----------------footer section starts------------------- */
+ footer .details {
+    /* position: absolute; */
+    color: var(--brown);
+    background-color: var(--footerdark);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    margin-top: 0.5rem;
+    top: 100vh;
+    padding: 70px 1rem 70px 1rem;
+    flex-grow: 2;
+    flex-wrap: wrap;
+
+ }
+ footer .details .follow, .location, .links, .contact{
+    margin: 0 1rem 0 1rem;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ footer .details ul{
+    list-style-type: none;
+ }
+ footer .details ul li:hover{
+   color: var(--white);
+   cursor: pointer;
+   font-size: 1.2rem;
+ }
+ @media (max-width:700px){
+    footer .details {
+        flex-wrap: wrap;
+    }
+ }
+ @media (max-width:500px){
+    footer .details .follow, .location, .links, .contact{
+        border: 1px solid var(--brown);
+        margin: 0.5rem 0 0 0;
+    }
+ }
+ /* ----------------footer section ends------------------- */
