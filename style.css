@@ -11,6 +11,9 @@
     --footerdark:rgb(63, 61, 61);
     --footerbright:rgb(141, 141, 141);
     --brown:rgb(46, 31, 31);
+    --offerDark:rgb(37, 36, 36);
+    --offerLight:rgb(207, 205, 205);
+    --menudarkcard:rgba(218, 196, 133, 0.3);
 }
 
 *{
@@ -23,6 +26,7 @@
     box-sizing: border-box;
     transition: all 0.2s linear;
     text-transform: capitalize;
+   
 }
 
 body{
@@ -186,6 +190,7 @@ header .left-nav i:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 2rem 0 2rem;
 }
 
 .home-section .wrapper .slide .content h3{
@@ -197,10 +202,26 @@ header .left-nav i:hover{
     font-size: xx-large;
     font-weight: bolder;
 }
+.home-section .wrapper .slide .burger img{
+width:560px;
+}
 /* rotating effect in dishes */
 .home-section .wrapper .slide .rotate img{
     width: 500px;
    animation: spin 20s linear infinite;
+}
+@media (max-width:900px){
+    .home-section .wrapper .slide .rotate img{
+        width: 300px;
+    }
+    .home-section .wrapper .slide .burger img{
+        width:300px;
+        }
+}
+@media (max-width:500px){
+    .home-section .wrapper .slide{
+        flex-direction: column;
+    }
 }
 @keyframes spin {
     0%{
@@ -225,6 +246,87 @@ header .left-nav i:hover{
     }
 }
 /* ----------------home Section ends----------------------- */
+/* -----------------food zone start-------------------- */
+.category p{
+    padding: 1rem 5rem 1rem 5rem;
+    text-align: center;
+}
+
+.category .catalogue{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0rem 2rem 0rem 2rem;
+}
+.category .catalogue .foods{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem 1rem 1rem;
+}
+.category .catalogue .foods span{
+    color: var(--glowupyellow);
+    font-style: italic;
+}
+.category .catalogue .foods img{
+    width: 5rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+/* -----------------food zone ends---------------- */
+/* ----------------Offer zone starts-------------- */
+main .heading{
+    background-color: var(--black);
+    color: var(--yellow);
+    margin: 2rem 3rem 2rem 3rem ;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.offer-zone .card{
+    background-color: var(--offerDark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+}
+@media (max-width:900px){
+    .offer-zone .card{
+        display: none;
+    }
+}
+/* ----------------Offer zone ends---------------- */
+
+/* ----------------Foodies section start---------- */
+.food-zone .menu-card{
+    background-color:var(--menudarkcard) ;
+    color: black;
+    padding: 1rem 2rem 1rem 2rem;
+    width: 20%;
+    height: 300px;
+    border-radius: 1rem;
+    margin: 1rem 2rem 1rem 2rem;
+}
+.food-zone .menu-card img{
+    border-radius: 50%;
+    border: 5px solid var(--yellow);
+    position: relative;
+    z-index: 100;
+    left: 50%;
+    top: -30px;
+    box-shadow: 1px 1px 2px solid black;
+}
+.food-zone .menu-card .menu-content{
+    position: relative;
+    bottom: 20px;
+}
+/* ----------------Foodies section  ends----------  */
 
  /* ----------------footer section starts------------------- */
  footer .details {
