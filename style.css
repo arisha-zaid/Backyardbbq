@@ -27,7 +27,7 @@
 }
 
 body{
-    background-image: linear-gradient(var(--blackcover),var(--blackcover)),url(assest/backgroundimg.jpg);
+    background-image: linear-gradient(var(--blackcover),var(--blackcover)),url(../assest/backgroundimg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -57,341 +57,480 @@ header .logo{
     font-weight: bold;
     color: var(--yellow);
 }
+span {
+  color:white;
+}
 
-header .nav-bar {
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 35%;
+    height: 100vh;
+  }
+  /*-- Main Open Pop-Up Button --*/
+  .select-yourself {
+    position:relative;
+    top:30px;
+    left:0px;
+    height:400px;
+    width:600px;
+    background-color:bisque;
+    display:flex;
+    justify-content: space-evenly;
+    
+
+}
+.main-image{
+  height:400px;
+  width:290px;
+  background-color:#333;
+}
+.select-yourself .btn-main{
+  position:relative;
+  top:200px;
+  left:60px;
 }
 
-header .nav-bar  a{
-    color: var(--yellow);
-    font-weight: 250;
-    font-size: 1rem;
-    text-decoration: none;
-    position: relative;
+.select-yourself .main-image p{
+  position:relative;
+  top:100px;
+  left:40px;
+  font-size:50px;
+  color:white;
 }
-/* underline transition in nav-bar */
-header .nav-bar  a::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
+
+.select-yourself .main-image span{
+  color:Yellow;
+}
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .btn-main {
+    padding: 15px 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e34c26;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-close {
+    margin-top: 10px;
+    background-color: #dc3545;
+  }
+  
+  .btn-close:hover {
+    background-color: #a71d2a;
+  }
+  
+  .btn-alternative {
+    margin-top: 10px;
+    background-color: #17a2b8;
+  }
+  
+  .btn-alternative:hover {
+    background-color: #117a8b;
+  }
+  
+  .btn-social {
+    display: block;
     width: 100%;
-    height: 2px;
-    background-color: var(--yellow);
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s ease;
-}
-header .nav-bar  a:hover::after{
-    transform: scaleX(1);
-    transform-origin:bottom right ;
-}
-
-header .left-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 10%; */
-}
-header .left-nav i{
-    color: var(--yellow);
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    padding: 1rem;
-}
-header .left-nav .menu-bars{
-    display: none;
-}
-header .left-nav i:hover{
-   color: var(--glowupyellow);
-   font-size: 1.3rem;
-}
-
-@media (max-width:990px){
-    header .nav-bar{
-        width: 40%;
-    }
-    header .nav-bar{
-        position: absolute;
-        left: 60%;
-        right: 0;
-        top: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        background-color: rgb(28, 28, 28);
-        height: 300px;
-        border-radius: 1%;
-        box-shadow: 1px 1px 1px black;
-        z-index: 100;
-        clip-path: polygon(0 0, 100% 0,100% 0,0 0);
-       
-    }
-
-    header .nav-bar .view{
-        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-    }
-
-    header .left-nav{
-        width: 35%;
-    }
-    header .nav-bar a{
-        width: 100%;
-        height: 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    header .nav-bar a:hover{
-        color: var(--glowupyellow);
-        font-size: 1.3rem;
-        text-decoration: none;
-        transition: all 0.2s linear;
-    }
-    header .left-nav .menu-bars{
-        display: inline-block;
-    }
-}
-
-@media (max-width:700px){
-    header .logo{
-        font-size: 1.5rem;
-    }
-    header .left-nav {
-      padding-right: 2rem;
-    }
-    header .left-nav i,a{
-        font-size: 1rem;
-        padding: none;
-    }
-
-}
-
-@media (max-width:500px){
-    header{
-     padding-right:0.5rem ;
-    }
-    header .left-nav .fa-heart{
-        display: none;
-    }
-}
- /* ------------------header section ends---------------------- */
-
-/* ----------------home Section starts----------------------*/
-
-.home-section{
-    padding-top:5rem ;
-}
-.home-section .wrapper .slide{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem 0 2rem;
-}
-
-.home-section .wrapper .slide .content h3{
-    color: var(--yellow);
-    font-size: 2rem;
-}
-.home-section .wrapper .slide .content span{
-    font-size: xx-large;
-    font-weight: bolder;
-}
-.home-section .wrapper .slide .burger img{
-width:560px;
-}
-/* rotating effect in dishes */
-.home-section .wrapper .slide .rotate img{
-    width: 500px;
-   animation: spin 20s linear infinite;
-}
-@media (max-width:900px){
-    .home-section .wrapper .slide .rotate img{
-        width: 300px;
-    }
-    .home-section .wrapper .slide .burger img{
-        width:300px;
-        }
-}
-@media (max-width:500px){
-    .home-section .wrapper .slide{
-        flex-direction: column;
-    }
-}
-@keyframes spin {
-    0%{
-       transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-.home-section .wrapper .slide .burger img{
-    animation: squeeze 4s linear infinite;
-}
-@keyframes squeeze {
-    0%{
-        transform: scale3d(0.2);
-    }
-    50%{
-        transform: scale(0.5);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-/* ----------------home Section ends----------------------- */
-/* -----------------food zone start-------------------- */
-.category p{
-    padding: 1rem 5rem 1rem 5rem;
-    text-align: center;
-}
-
-.category .catalogue{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0rem 2rem 0rem 2rem;
-}
-.category .catalogue .foods{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 1rem 1rem 1rem;
-}
-.category .catalogue .foods span{
-    color: var(--glowupyellow);
-    font-style: italic;
-}
-.category .catalogue .foods img{
-    width: 5rem;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    cursor: pointer;
-}
-.category .catalogue .foods img:hover{
-    border: 2px solid var(--yellow);
-}
-
-/* -----------------food zone ends---------------- */
-/* ----------------Offer zone starts-------------- */
-main .heading{
-    background-color: var(--black);
-    color: var(--yellow);
-    margin: 2rem 3rem 2rem 3rem ;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-.offer-zone .card{
-    background-color: var(--offerDark);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1rem 0 1rem 0;
-    border-radius: 1rem;
-    flex-wrap: wrap;
-}
-@media (max-width:900px){
-    .offer-zone .card{
-        display: none;
-    }
-}
-/* ----------------Offer zone ends---------------- */
-
-/* ----------------Foodies section start---------- */
-.food-zone{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 1rem 1rem 1rem 1rem;
-}
-.food-zone .menu-card{
-    background-color:var(--menudarkcard) ;
-    color: black;
-    padding: 1rem 2rem 1rem 2rem;
-    width: 270px;
-    height: 300px;
-    border-radius: 1rem;
-    margin: 1rem 2rem 1rem 2rem;
-    box-shadow: 2px 2px 2px black;
-    cursor: pointer;
-}
-.food-zone .menu-card:hover{
-    box-shadow: 2px 2px 7px black;
-    transform: scale(1.1,1.1);
-}
-.food-zone .menu-card img{
-    border-radius: 50%;
-    border: 5px solid var(--yellow);
-    position: relative;
-    z-index: 100;
-    left: 50%;
-    top: -30px;
-    box-shadow: 1px 1px 2px solid black;
-    width: 11rem;
-    height: 11rem;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px black;
-}
-.food-zone .menu-card .menu-content{
-    position: relative;
-    bottom: 20px;
-}
-.food-zone .menu-card .menu-content .stars i{
-    color: var(--yellow);
-}
-/* ----------------Foodies section  ends----------  */
-
- /* ----------------footer section starts------------------- */
- footer .details {
-    /* position: absolute; */
-    color: var(--brown);
-    background-color: var(--footerdark);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    margin-top: 0.5rem;
-    top: 100vh;
-    padding: 70px 1rem 70px 1rem;
-    flex-grow: 2;
-    flex-wrap: wrap;
-
- }
- footer .details .follow, .location, .links, .contact{
-    margin: 0 1rem 0 1rem;
-    height: 200px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
- footer .details ul{
+    font-size: 16px;
+  }
+  
+  .btn-social.google {
+    background-color: #4285F4;
+    color: white;
+  }
+  
+  .btn-social.google:hover {
+    background-color: #3367d6;
+  }
+  
+  .btn-social.facebook {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .btn-social.facebook:hover {
+    background-color: #2d4373;
+  }
+  
+  .btn-social.apple {
+    background-color: #333333;
+    color: white;
+  }
+  
+  .btn-social.apple:hover {
+    background-color: #000000;
+  }
+  
+/* Google Email Selection Pop-Up Styles */
+.popup-content ul {
     list-style-type: none;
- }
- footer .details ul li:hover{
-   color: var(--white);
-   cursor: pointer;
-   font-size: 1.2rem;
- }
- @media (max-width:700px){
-    footer .details {
-        flex-wrap: wrap;
+    padding: 0;
+    margin: 15px 0;
+  }
+  
+  .popup-content ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .popup-content ul li:hover {
+    background-color: #e9ecef;
+    color:black;
+    cursor: pointer;
+  }
+  
+  /* Facebook Sign-In Pop-Up */
+/* Facebook Pop-Up Styling */
+#facebook-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #facebook-popup .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #facebook-popup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #facebook-popup .input-group {
+    margin-bottom: 15px;
+  }
+  
+  #facebook-popup .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #facebook-popup .input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #facebook-popup .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #3b5998; /* Facebook color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #facebook-popup .btn-close {
+    width: 100%;
+    padding: 10px;
+    background-color: #f44336; /* Close button color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Pop-Up General Styles */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    /* z-index: 1000; */
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width:400px;
+    color:#fff;
+    /* width: 90%; */
+    /* max-width: 400px; */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+  /* .popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  } */
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e34c26;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .btn:hover {
+    background-color: #d43f20;
+  }
+  
+  .btn-alternative {
+    margin-top: 15px;
+    background-color: #007bff;
+  }
+  
+  .btn-alternative:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-close {
+    margin-top: 15px;
+    background-color: #444;
+  }
+  
+  .btn-close:hover {
+    background-color: #555;
+  }
+  
+  
+/*-------admin page --------------*/
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.btn-close {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: darkblue;
+}
+
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .popup-content {
+      width: 100%;
+      padding: 15px;
     }
- }
- @media (max-width:500px){
-    footer .details .follow, .location, .links, .contact{
-        border: 1px solid var(--brown);
-        margin: 0.5rem 0 0 0;
+  
+    .btn {
+      font-size: 14px;
+      padding: 8px 15px;
     }
- }
- /* ----------------footer section ends------------------- */
+  }
+
+
+
+   /* General Popup Styling */
+s */
+  .form-popup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .forget-password {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .forget-password a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forget-password a:hover {
+    text-decoration: underline;
+  }
+
+  /* Create New Account Link */
+.create-new-account {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .create-new-account a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .create-new-account a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 20px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .popup-content {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .input-group input {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .btn-social {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 18px;
+    }
+  
+    .btn {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  
+    .btn-social {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .popup-content {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .input-group input {
+      font-size: 10px;
+      padding: 6px;
+    }
+  }
+  
