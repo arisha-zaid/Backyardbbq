@@ -57,3 +57,17 @@ const star=document.querySelectorAll('fa-regular','fa-star');
 star.onclick=()=>{
   console.log(" clicked!");
 }
+
+// search bar working
+window.onscroll=()=>{
+  menu.classList.remove("fa-times")
+  nav.classList.remove('active');
+}
+
+document.querySelector(".fa-magnifying-glass").onclick=()=>{
+  document.querySelector("#search-form").classList.toggle('active');
+}
+
+document.querySelector("#close").onclick=()=>{
+  document.querySelector("#search-form").classList.remove('active');
+}

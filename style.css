@@ -243,6 +243,54 @@ width:560px;
     }
 }
 /* ----------------home Section ends----------------------- */
+
+/* searching bar */
+#search-form{
+    position: fixed;
+    top:-110%;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: 10004;
+    background-color: var(--blackcover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form #search-box{
+    width: 50rem;
+    border-bottom:0.1rem solid var(--yellow);
+    padding: 1rem 0rem ;
+    font-size: 1.7rem;
+    text-transform: none;
+    background: none;
+    color: var(--yellow);
+}
+#search-form #search-box::placeholder{
+    color: var(--yellow);
+}
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+#search-form label{
+    color: #FFC107;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+#search-form #close{
+    position: absolute;
+    color: #FFC107;
+    cursor: pointer;
+    font-size: 1.7rem;
+    top: 2rem;
+    right: 3rem;
+}
+#search-form.active{
+    top:0;
+}
+
 /* -----------------food zone start-------------------- */
 .category p{
     padding: 1rem 5rem 1rem 5rem;
