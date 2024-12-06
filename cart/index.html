@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <header>
+   
+        <div class="logo">
+        <img src="../assest/logo.jpg" alt="logo" height="25rem" width="25rem">
+         Welcome To <span> Food Lover's</span> Website
+        </div>
+        </header>
+
+  <div class="container">
+    <h1 class="cart-title">Your Cart</h1>
+
+    <!-- Cart Items -->
+    <div id="cart-items">
+      <div class="cart-item">
+        <img src="../assest/salad1.jpg" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Italian Salad</h3>
+          <p>Price: ₹159</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assest/pizza.jpg" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Paneer Pizza</h3>
+          <p>Price: ₹299</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assest/seafood.png" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Sea Food</h3>
+          <p>Price: ₹129</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assest/Floating-burger-PNG.png" alt="Product Image">
+        <div class="cart-item-details">
+          <h3> Burger</h3>
+          <p>Price: ₹199</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assest/momos.jpg" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Veg Momos</h3>
+          <p>Price: ₹89</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assest/spagetti.jpg" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Spaghetti</h3>
+          <p>Price: ₹249</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assest/Spring Rolls.jpg" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Spring Role</h3>
+          <p>Price: ₹149</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assest/pure veg.png" alt="Product Image">
+        <div class="cart-item-details">
+          <h3>Full Plate</h3>
+          <p>Price: ₹99</p>
+        </div>
+        <div class="cart-item-actions">
+          <div class="quantity-control">
+            <button onclick="decreaseQuantity(this)">-</button>
+            <input type="number" value="1" min="1">
+            <button onclick="increaseQuantity(this)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <h3>Cart Total</h3>
+      <p id="total-price">₹1414</p>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
