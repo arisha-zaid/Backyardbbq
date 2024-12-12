@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;  /* Black background */
+    color: white;
+  }
+
+ /* ------------preloader----------------- */
+ #preloader{
+  background-color: #000 url(../assest/circle-loader.gif) no-repeat center center ;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+ }
+
+
+/* ------------header section starts--------------- */
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
+   padding: 0 0.5rem 0 1.5rem;
+   background-color: var(--black);
+   height: 50px;
+   box-shadow: 2px 2px 5px rgb(62, 61, 61);
+}
+.logo {
+  color:yellow;
+}
+
+header .logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--yellow);
+}
+span {
+  color:#ffcc00;
+}
+
+/* ---------------------favorite items-------------------- */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #333;  /* Dark gray background for the container */
+    padding: 20px;
+   margin-top:100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cart-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffcc00;  /* Yellow text for the title */
+  }
+
+.card{
+    border-bottom: 1px solid #555; 
+    background-color: #1a1a1a; 
+    color: white;
+}
+
+  .card img{
+    height: 16rem;
+    padding: 2px 2px 2px 2px;
+    border: 10px solid  #1a1a1a;
+  }
+
+.card .card-body i{
+    color: rgb(207, 5, 5);
+    cursor: pointer;
+}
