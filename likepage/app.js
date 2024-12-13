@@ -21,5 +21,6 @@ function removeItem(button) {
         popup.style.transition = "opacity 0.5s";
         popup.style.opacity = "0";
         setTimeout(() => popup.remove(), 500); // Remove the pop-up after fading out
-    }, 2000); // Display for 2 secon
+    }, 2000); // Display for 2 seconds
+
 }
