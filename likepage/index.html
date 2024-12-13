@@ -29,6 +29,22 @@
         <div class="container">
     <h1 class="cart-title">Your Favorites</h1>
 
+     <!-- toast page-->
+
+     <div class="toast-container position-fixed bottom-0 end-0 p-3">
+       <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+         <div class="toast-header">
+           <img src="..." class="rounded me-2" alt="...">
+           <strong class="me-auto">Bootstrap</strong>
+           <small>11 mins ago</small>
+           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+         </div>
+         <div class="toast-body">
+           Hello, world! This is a toast message.
+         </div>
+       </div>
+     </div>
+
        <!-- Like page items  -->
         
        <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -38,7 +54,7 @@
             <div class="card-body">
               <h5 class="card-title">Italian Salad</h5>
               <p class="card-text">Price: ₹159</p>
-              <i class="fa-solid fa-heart" onclick="console.log('click');"></i>
+              <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
             </div>
           </div>
         </div>
@@ -48,7 +64,7 @@
             <div class="card-body">
               <h5 class="card-title">Paneer Pizza</h5>
               <p class="card-text">Price: ₹299</p>
-              <i class="fa-solid fa-heart"></i>
+              <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
             </div>
           </div>
         </div>
@@ -58,7 +74,7 @@
             <div class="card-body">
               <h5 class="card-title">Sea Food</h5>
               <p class="card-text">Price: ₹699</p>
-              <i class="fa-solid fa-heart"></i>
+              <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
             </div>
           </div>
         </div>
@@ -68,7 +84,7 @@
             <div class="card-body">
               <h5 class="card-title">Italian Salad</h5>
               <p class="card-text">Price: ₹159</p>
-              <i class="fa-solid fa-heart"></i>
+              <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
             </div>
           </div>
         </div>
@@ -79,7 +95,7 @@
               <div class="card-body">
                 <h5 class="card-title">Italian Salad</h5>
                 <p class="card-text">Price: ₹159</p>
-                <i class="fa-solid fa-heart"></i>
+                <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
               </div>
             </div>
           </div>
@@ -90,7 +106,7 @@
               <div class="card-body">
                 <h5 class="card-title">Italian Salad</h5>
                 <p class="card-text">Price: ₹159</p>
-                <i class="fa-solid fa-heart"></i>
+                <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
               </div>
             </div>
           </div>
@@ -101,7 +117,7 @@
               <div class="card-body">
                 <h5 class="card-title">Italian Salad</h5>
                 <p class="card-text">Price: ₹159</p>
-                <i class="fa-solid fa-heart"></i>
+                <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
               </div>
             </div>
           </div>
@@ -112,7 +128,7 @@
               <div class="card-body">
                 <h5 class="card-title">Italian Salad</h5>
                 <p class="card-text">Price: ₹159</p>
-                <i class="fa-solid fa-heart"></i>
+                <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
               </div>
             </div>
           </div>
@@ -123,7 +139,7 @@
               <div class="card-body">
                 <h5 class="card-title">Italian Salad</h5>
                 <p class="card-text">Price: ₹159</p>
-                <i class="fa-solid fa-heart"></i>
+                <button class="remove-btn" onclick="removeItem(this)"> <i class="fa-solid fa-heart"></i></button>
               </div>
             </div>
           </div>
@@ -131,5 +147,7 @@
 
       </div>
        </div>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+       <script src="app.js"></script>
 </body>
 </html>
