@@ -1,10 +1,10 @@
 // Preloader logic
-// document.addEventListener("DOMContentLoaded", () => {
-//     const preloader = document.getElementById("preloader");
-//     window.onload = () => {
-//         preloader.style.display = "none"; // Hide the preloader
-//     };
-// });
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById("preloader");
+    window.onload = () => {
+        preloader.style.display = "none"; // Hide the preloader
+    };
+});
 
 // Function to handle "like" button clicks
 function removeItem(button) {
