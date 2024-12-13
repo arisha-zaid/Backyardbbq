@@ -9,16 +9,7 @@
     background-color: #1a1a1a;  /* Black background */
     color: white;
   }
-  /* body{
-    background-image: linear-gradient(var(--blackcover),var(--blackcover)),url(../assest/backgroundimg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    background-color: var(--black);
-    color: var(--white);
-} */
+ 
 
   /* ------------header section starts--------------- */
   header{
